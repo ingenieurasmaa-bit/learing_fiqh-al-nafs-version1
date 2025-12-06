@@ -1,0 +1,139 @@
+/* home.css */
+
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+#home h1 {
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--color-white), var(--color-red-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#home .muted {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* قواعد المجلس */
+.rules-box {
+   background: var(--color-dark);
+  border: 1px solid var(--border-radius);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: right;
+  line-height: 1.8;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+}
+
+.rules-box h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-red-light);
+}
+
+.rules-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rules-box li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-right: 1.5rem;
+  color: var(--color-white);
+}
+
+.rules-box li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--color-red);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* أزرار الصفحة الرئيسية */
+#homeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  color: var(--color-white);
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  justify-content: center;
+}
+
+.btn-pink:hover {
+  background: linear-gradient(135deg, var(--color-red-dark), var(--color-red));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-dark);
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  border: 2px solid var(--color-white);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  justify-content: center;
+}
+
+.btn-white:hover {
+  background: transparent;
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 768px) {
+  #home .card {
+    padding: 2rem 1.5rem;
+  }
+  
+  #homeButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-pink, .btn-white {
+    min-width: 200px;
+    padding: 14px 30px;
+  }
+}

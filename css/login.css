@@ -1,0 +1,74 @@
+/* login.css */
+
+
+#login {
+  background: var(--color-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-gray);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 12% auto;
+}
+
+
+#login h1 {
+  font-size: 2rem;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#login .col {
+  margin-bottom: 1.5rem;
+}
+
+#login label {
+  display: block;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+#login input {
+width: 100%;
+   padding: 14px 40px;
+  background: var(--color-black);
+  border: 2px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+#login input:focus {
+  outline: none;
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  color: var(--color-white);
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: block;
+  margin: 0.5rem auto 0;
+  text-align: center;
+  width: 40%;
+}
+
+.btn-blue:hover {
+  background: linear-gradient(135deg, var(--color-red-dark), var(--color-red));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}

@@ -1,0 +1,73 @@
+/* register.css */
+
+
+#register {
+   background: var(--color-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-gray);
+  max-width: 60%;
+  display: grid; 
+  padding: 2rem;
+  margin: 5% auto;
+}
+
+
+
+#register h1 {
+  font-size: 2rem;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#register .row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#register .col {
+  flex: 1;
+  min-width: 250px;
+}
+
+#register label {
+  display: block;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+#register input,
+#register select {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-black);
+  border: 2px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+#register input:focus,
+#register select:focus {
+  outline: none;
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  #register .row {
+    flex-direction: column;
+  }
+  
+  #register .col {
+    min-width: 100%;
+  }
+}

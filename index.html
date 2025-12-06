@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة فقه النفس</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/theme_toggle.css">
+</head>
+<body>
+  <!-- زر تبديل الوضع -->
+  <header>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+    <h1 class="glow-text">منصة فقه النفس</h1>
+  </header>
+
+  <div class="container">
+    <p class="intro">
+        مرحبًا بك في دورة <strong>فقه النفس</strong>   الذي هو  اجتهاد لفهم النفس الإنسانية بوحي خالقها. سعيا إلى طمأنينة الدنيا وسعادة الآخرة.
+      بعقل ووحي ونظر. وبتطبيقات حياتية عملية. <br>وموطن فقه النفس هو مركز مكاني. والمشرف عليه هو عبدالرحمن ذاكر الهاشمي طبيب واستشاري علم النفس التربوي والعلاج النفسي. 
+    </p>
+
+    <div class="video-box pulse">
+      <iframe 
+        src="./audio/ما هي مادة فقه النفس (اقرأ، ونفس، لتعارفوا)؟.mp4" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="firstpageBoutton">
+      <a href="./html/register.html" class="btn">ابدأ التسجيل الآن</a>
+      <a id="startBtn" href="#" class="btn" style="display:none;">ابدأ الآن</a>
+    </div>
+  </div>
+
+  <footer class="small-note">
+    جميع الحقوق محفوظة © 2025 فقه النفس     
+  </footer>
+
+  <script type="module" src="./js/start.js"></script>
+  <script>
+    // كود تبديل الوضع
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    
+    // تطبيق الوضع المحفوظ
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateToggleButton(currentTheme);
+    
+    // تبديل الوضع
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleButton(newTheme);
+    });
+    
+    function updateToggleButton(theme) {
+      themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>

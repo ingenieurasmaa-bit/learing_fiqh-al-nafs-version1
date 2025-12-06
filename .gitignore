@@ -1,0 +1,19 @@
+
+# بيانات Firebase الحساسة
+firebase-config.js
+*.pem
+*.key
+
+# ملفات النظام
+.DS_Store
+Thumbs.db
+
+# محررات الكود
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ملفات البناء
+dist/
+build/

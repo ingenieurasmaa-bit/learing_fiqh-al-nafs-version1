@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>تسجيل جديد</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/theme_toggle.css">
+</head>
+<body>
+    <!-- 1 - صفحة التسجيل -->
+    <section id="register" class="card">
+      <p><button class="theme-toggle" id="themeToggle">🌙</button></p>
+      <h1>نموذج تسجيل الطالب / المشرف</h1>
+      <div class="row">
+        <div class="col">
+          <label>الاسم الكامل</label>
+          <input id="name" type="text" placeholder="مثال: أسماء" />
+        </div>
+        <div class="col">
+          <label>عنوان الدرس</label>
+          <input id="lessonTitle" type="text" placeholder="مثال: فقه النفس 001" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>الدور</label>
+          <select>
+            <option value="student">طالبة</option>
+            <option value="admin">مشرفة</option>
+          </select>
+          <div class="col" id="adminCodeContainer" style="display:none;">
+            <label class="label_code">كود المشرفة</label>
+            <input id="adminCode" type="password" placeholder="أدخل كود المشرفة" />
+          </div>
+        </div>
+        <div class="col">
+          <label>اسم المجموعة</label>
+          <input id="groupInput" type="text" placeholder="اسم المجموعة" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>تاريخ التسجيل</label>
+          <input id="regDate" type="text" />
+        </div>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+        <a class="btn-blue" href="home.html">سجّل</a>
+      </div>
+      <div class="small-note">عند التسجيل سيتم إنشاء رقم خاص بك وحفظ التقدم محليًا</div>
+    </section>
+  <script type="module" src="../js/register.js"></script>
+  <script src="../js/theme.js"></script>
+</body>
+</html>
