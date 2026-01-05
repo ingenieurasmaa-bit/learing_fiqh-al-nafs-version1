@@ -1,57 +1,0 @@
-
-<!DOCTYPE html>
-<html  lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشاهدة الفيديوهات </title>
-      <link rel="stylesheet" href="../css/video.css">
-        <link rel="stylesheet" href="../style.css">
-            <link rel="stylesheet" href="../css/theme_toggle.css">
-       <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
-<body>
-  <button class="theme-toggle" id="themeToggle">🌙</button>
-        <!-- 3 - صفحة مشاهدة الفيديو -->
- <section id="videos" class="card" >
-    <!-- NAV -->
-    <nav class="card" id="mainNav">
-      <header> 📘 منصة فقه النفس — وحدات واختبارات  </header>
-      <div>
-        <!-- <strong id="welcomeName"></strong> -->
-      <!--   <div class="small-muted" id="welcomeDetail"></div> -->
-      </div>
-      <div style="display:flex;gap:8px;align-items:center; margin-left: 6rem  ;">
-     <a href="admin.html" class="btn-ghost  btn-white"> 📊 تقدم الطالبات </a>
-    <a href="../html/schedule.html" class="btn-ghost">جدول  المواعيد   </a>
-    <a href="../html/resources.html" class="btn-ghost">ملحقات   </a>
-    <a href="../index.html" class="btn-ghost">خروج  </a>
-      </div>
-    </nav>
-  <main>
-    <aside id="sidebar">
-      <!-- الوحدات تبنى ديناميكياً -->
-    </aside>
-
-    <section class="content" id="mainContent">
-      <h2 id="lesson-title">اختر درسًا من القائمة</h2>
-      <div class="video-box" id="videoBox">
-        <iframe id="player" src="" allowfullscreen></iframe>
-      </div>
-      <div id="quiz"></div>
-      <div class="controls">
-      <button id="prev-btn" class="ctrl-btn">← السابق</button>
-      <button id="complete-btn" class="ctrl-btn">إكمال الدرس</button>
-      <button id="next-btn" class="ctrl-btn">التالي →</button>
-    </div>
-    </section>
-    
-  </main>
- <footer>
-  <p class="small-note">الحالة تحفظ تلقائياً. بعد إنهاء آخر درس في الوحدة سيظهر اختبار الوحدة.</p>
- </footer>
-    </section> 
-  <script type="module" src="../js/video.js"></script>
-<script src="../js/theme.js"></script>
-</body>
-</html>

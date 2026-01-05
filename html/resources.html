@@ -1,169 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ملحقات الدورة | فقه النفس</title>
-  <link rel="stylesheet" href="../css/resourse.css" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/theme_toggle.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-</head>
-<body>
-  <button class="theme-toggle" id="themeToggle">🌙</button>
-  <nav class="nav">
-    <h2>📚 ملحقات الدورة</h2>
-    <a href="../html/videos.html" class="btn">العودة لقسم الفيديوهات</a>
-  </nav>
-
-  <main class="container_resourse">
-    <!-- قسم الشرائح -->
-    <section class="collapsible-section">
-      <div class="section-header">
-        <h3>📄 الشرائح</h3>
-        <div>
-          <button class="toggle-btn">▼</button>
-        </div>
-      </div>
-      <div class="section-content">
-        <ul>
-          <li><a href="../pdf/شرائح 6 78.pdf" target="_blank">📘 شرائح المجلس 6</a></li>
-        </ul>
-        <button class="add-item-btn" data-section="slides">➕ إضافة شرائح</button>
-  <!--          <button class="delete-section-btn" data-section="slides">
-            <span>🗑️</span>
-            حذف إضافاتي
-          </button> -->
-      </div>
-    </section>
-
-    <!-- قسم التفريغات -->
-    <section class="collapsible-section">
-      <div class="section-header">
-        <h3>📄 التفريغات</h3>
-        <div>
-          <button class="toggle-btn">▼</button>
-        </div>
-      </div>
-      <div class="section-content">
-        <ul>
-          <li><a href="../pdf/تفريغ فقه النفس 35 - ونفس 07 (1).pdf" target="_blank">📘 مجالس فقه النفس 035 | ونفس 07 | من فقه المخلوقية إلى الحاجة وسننها 02</a></li>
-      <!--     <li><a href="../pdf/تفريغ فقه النفس 36- ونفس 08 (1).pdf" target="_blank">📗 مجالس فقه النفس 036 | ونفس 08 | من فقه المخلوقية إلى الحاجة وسننها 03</a></li>
-          <li><a href="../pdf/تفريغ فقه النفس 37 - ونفس 09.pdf" target="_blank">📙 مجالس فقه النفس 037 | ونفس 09 من فقه المخلوقية إلى الحاجة وسننها 04</a></li> -->
-        </ul>
-        <button class="add-item-btn" data-section="transcripts">➕ إضافة تفريغ</button>
-     <!--      <button class="delete-section-btn" data-section="transcripts">
-            <span>🗑️</span>
-            حذف إضافاتي
-          </button> -->
-      </div>
-    </section>
-
-    <!-- قسم الصوتيات -->
-    <section class="collapsible-section">
-      <div class="section-header">
-        <h3>🎧 الصوتيات</h3>
-        <div>
-          <button class="toggle-btn">▼</button>
-        </div>
-      </div>
-      <div class="section-content">
-        <ul class="file-list" id="audioList">
-          <li>
-            <div class="user-item">
-              <p>مجالس فقه النفس 035 | ونفس 07 | من فقه المخلوقية إلى الحاجة وسننها 02</p>
-              <audio controls>
-                <source src="../audio/مجالس فقه النفس 035  ونفس 07  من فقه المخلوقية إلى الحاجة وسننها 02.ogg" type="audio/mpeg">
-              </audio>
-              <span class="item-badge">إضافة مستخدم</span>
-            </div>
-          </li>
- <!--          <li>
-            <div class="user-item">
-              <p>مجالس فقه النفس 036 | ونفس 08 من فقه المخلوقية إلى الحاجة وسننها 03</p>
-              <audio controls>
-                <source src="../audio/فقه النفس 36.ogg" type="audio/mpeg">
-              </audio>
-              <span class="item-badge">إضافة مستخدم</span>
-            </div>
-          </li> -->
-       <!--    <li>
-            <div class="user-item">
-              <p>مجالس فقه النفس 037 | ونفس 09 من فقه المخلوقية إلى الحاجة وسننها 04</p>
-              <audio controls>
-                <source src="../audio/مجالس_فقه_النفس_037_ونفس_09_من_فقه_المخلوقية_إلى_الحاجة_2SYySFosV9s.m4a" type="audio/mpeg">
-              </audio>
-              <span class="item-badge">إضافة مستخدم</span>
-            </div>
-          </li> -->
-        </ul>
-        <button class="add-item-btn" data-section="audio">➕ إضافة صوتيات</button>
-       <!--      <button class="delete-section-btn" data-section="audio">
-            <span>🗑️</span>
-            حذف إضافاتي
-          </button> -->
-      </div>
-    </section>
-
-    <!-- حاوية التحكم -->
-    <div class="controls-container">
-      <button class="clear-all-btn" id="clearAllBtn">
-        <span>⚠️</span>
-        حذف جميع الإضافات
-      </button>
-      <div class="clear-confirm" id="clearConfirm">
-        <p>⚠️ هل أنت متأكد من حذف جميع الإضافات من جميع الأقسام؟</p>
-        <p><small>لا يمكن التراجع عن هذا الإجراء</small></p>
-        <div class="confirm-buttons">
-          <button class="confirm-btn" id="confirmClearAll">نعم، احذف الكل</button>
-          <button class="cancel-btn" id="cancelClearAll">إلغاء</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- نموذج إضافة عنصر جديد -->
-    <div id="addItemModal" class="modal">
-      <div class="modal-content">
-        <h3>إضافة عنصر جديد</h3>
-        <form id="addItemForm">
-          <input type="hidden" id="sectionType">
-          <div class="form-group">
-            <label for="itemTitle">اسم العنصر:</label>
-            <input type="text" id="itemTitle" required>
-          </div>
-          <div class="form-group">
-            <label for="itemUrl">رابط العنصر (اختياري):</label>
-            <input type="text" id="itemUrl" placeholder="https://example.com/audio.mp3">
-          </div>
-          <div class="form-group" id="pdfFileGroup" style="display: none;">
-    <label for="pdfFile">رفع ملف PDF:</label>
-    <input type="file" id="pdfFile" accept=".pdf" style="display: none;">
-    <button type="button" id="choosePdfBtn" class="btn secondary">اختر ملف PDF</button>
-    <span id="pdfFileName" style="margin-right: 10px; color: #666;"></span>
-</div>
-          <div class="form-group" id="audioFileGroup" style="display: none;">
-            <label for="audioFile">رفع ملف صوتي:</label>
-            <input type="file" id="audioFile" accept="audio/*" style="display: none;">
-            <button type="button" id="chooseFileBtn" class="btn secondary">اختر ملف صوتي</button>
-            <span id="fileName" style="margin-right: 10px; color: #666;"></span>
-            <div class="upload-progress" id="uploadProgress">
-              <div class="upload-progress-bar" id="progressBar"></div>
-            </div>
-            <div class="audio-file-info">
-              <span id="fileType"></span>
-              <span id="fileSize" class="file-size"></span>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn" id="submitBtn">إضافة</button>
-            <button type="button" id="cancelBtn" class="btn secondary">إلغاء</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </main>
-  
-  <script src="../js/theme.js"></script>
-  <script src="../js/resources.js"></script>
-</body>
-</html>
