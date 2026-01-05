@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة المشرفة | منصة فقه النفس</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- زر الثيم -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- الهيدر -->
+    <header class="admin-header fade-in">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div>
+                    <h1 class="site-title">منصة فقه النفس</h1>
+                    <p class="site-subtitle">لوحة تحكم المشرفة</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content fade-in" style="animation-delay: 0.1s">
+        <div class="content-header">
+            <h2 class="content-title">
+                <i class="fas fa-chart-line"></i>
+                تقدم الطالبات
+            </h2>
+            
+            <div class="nav-buttons">
+                <a href="../video/videos.html" class="nav-btn">
+                    <i class="fas fa-video"></i>
+                    <span>العودة للمجالس</span>
+                </a>
+                <a href="../home/home.html" class="nav-btn">
+                    <i class="fas fa-home"></i>
+                    <span>الصفحة الرئيسية</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- إحصائيات سريعة -->
+        <div class="stats-container fade-in" style="animation-delay: 0.2s" id="statsContainer">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value" id="totalStudents">0</div>
+                    <div class="stat-label">إجمالي الطالبات</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value" id="completedTasks">0</div>
+                    <div class="stat-label">مهام مكتملة</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value" id="totalTasks">0</div>
+                    <div class="stat-label">إجمالي التكاليف</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value" id="totalPoints">0</div>
+                    <div class="stat-label">إجمالي النقاط</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الجدول -->
+        <div class="table-container">
+            <table class="admin-table" id="adminTable">
+                <thead>
+                    <tr>
+                        <th>اسم الطالبة</th>
+                        <th>المجموعة</th>
+                        <th>آخر تكليف</th>
+                        <th>حالة التكليف</th>
+                        <th>عدد التكاليف</th>
+                     <th>آخر درس مكتمل</th> 
+                        <th>حالة الإكمال</th>
+                        <th>عدد الدروس </th> 
+                        <th>النقاط</th>
+                        <th>الدور</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- سيتم ملؤه بالجافاسكريبت -->
+                    <tr>
+                        <td colspan="11" class="loading-message">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            جاري تحميل البيانات...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="admin-footer fade-in" style="animation-delay: 0.3s">
+        <p>جميع الحقوق محفوظة © 2025 منصة فقه النفس</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray);">
+            <i class="fas fa-shield-alt"></i>
+            هذه الصفحة خاصة بالمشرفات فقط
+        </p>
+    </footer>
+
+    <!-- نافذة التعديل -->
+    <div class="edit-modal" id="editModal">
+        <div class="edit-modal-content">
+            <div class="edit-modal-header">
+                <h3>
+                    <i class="fas fa-edit"></i>
+                    تعديل بيانات الطالبة
+                </h3>
+            </div>
+            
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editName">
+                        <i class="fas fa-user"></i>
+                        اسم الطالبة
+                    </label>
+                    <input type="text" id="editName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editGroup">
+                        <i class="fas fa-users"></i>
+                        المجموعة
+                    </label>
+                    <input type="text" id="editGroup">
+                </div>
+                
+                <div class="form-group">
+                    <label for="editRole">
+                        <i class="fas fa-user-tag"></i>
+                        الدور
+                    </label>
+                    <select id="editRole">
+                        <option value="student">طالبة</option>
+                        <option value="admin">مشرفة</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editPoints">
+                        <i class="fas fa-star"></i>
+                        النقاط
+                    </label>
+                    <input type="number" id="editPoints" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="editHighestLesson">
+                        <i class="fas fa-chart-bar"></i>
+                        أعلى مجلس
+                    </label>
+                    <input type="text" id="editHighestLesson">
+                </div>
+                
+                <div class="form-group">
+                    <label for="editPrepared">
+                        <i class="fas fa-tasks"></i>
+                        التكليف
+                    </label>
+                    <select id="editPrepared">
+                        <option value="true">مكلفة</option>
+                        <option value="false">غير مكلفة</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editPreparedLessons">
+                        <i class="fas fa-list-check"></i>
+                        عدد التكاليف
+                    </label>
+                    <input type="number" id="editPreparedLessons" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="editCompleteLesson">
+                        <i class="fas fa-check-circle"></i>
+                        اكتمل الدرس
+                    </label>
+                    <select id="editCompleteLesson">
+                        <option value="true">نعم</option>
+                        <option value="false">لا</option>
+                    </select>
+                </div>
+                
+                <div class="modal-buttons">
+                    <button type="submit" class="modal-btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        حفظ التغييرات
+                    </button>
+                    <button type="button" class="modal-btn btn-secondary" id="cancelEdit">
+                        <i class="fas fa-times"></i>
+                        إلغاء
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
